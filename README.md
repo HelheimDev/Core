@@ -6,3 +6,5 @@
 * Database : PostgreSql
 
 * App: https://infinite-citadel-12217.herokuapp.com/
+
+* Meeting Creation: https://infinite-citadel-12217.herokuapp.com/meetings
