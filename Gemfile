@@ -7,6 +7,8 @@ ruby '2.3.3'
 gem 'rails', '~> 5.2.0'
 #Use Simple_Calendar github:excid3/simple_calendar
 gem 'simple_calendar', '~> 2.0'
+#Use Sprockets for rails ; 3.7.2 for sec vul
+gem 'sprockets', '~> 3.7.2'
 #Use Bootstrap and jquery for web implentation
 gem 'bootstrap'
 gem 'jquery-rails'
