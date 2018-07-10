@@ -38,3 +38,8 @@
     </div>
   <% end %>
 <% end %>
+
+<%= form_tag meetings_path, :method => 'get'  do %>
+  <%= text_field_tag :name, params[:name], autofocus: true,  type: "text", placeholder: 'search for meetings'%>
+  <%= submit_tag "search", type: "submit"%>
+<% end %>
