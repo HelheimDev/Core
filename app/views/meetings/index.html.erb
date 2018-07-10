@@ -27,3 +27,14 @@
 <br>
 
 <%= link_to 'New Meeting', new_meeting_path %>
+
+
+<%= month_calendar events: @meetings do |date, meetings| %>
+  <%= date %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <p style="color:#ff002e;"><%= meeting.name %></p>
+    </div>
+  <% end %>
+<% end %>
