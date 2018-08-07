@@ -115,6 +115,10 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
+    pg_search (2.1.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -213,6 +217,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg
+  pg_search
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)

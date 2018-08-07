@@ -12,6 +12,8 @@ gem 'sprockets', '~> 3.7.2'
 #Use Bootstrap and jquery for web implentation
 gem 'bootstrap'
 gem 'jquery-rails'
+#Use pg search for searching meetings
+gem 'pg_search'
 # Use PostgresSQL as the database for Active Record
 gem 'pg'
 # Use Puma as the app server

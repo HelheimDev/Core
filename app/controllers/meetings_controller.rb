@@ -4,7 +4,11 @@ class MeetingsController < ApplicationController
   # GET /meetings
   # GET /meetings.json
   def index
-    @meetings = Meeting.all
+      if params[:name].present?
+        @meetings = Meeting.find(params[:name])
+      else
+        @meetings = Meeting.all
+      end
   end
 
   # GET /meetings/1
@@ -61,14 +65,24 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def search
+
+      @meetings = Meeting.plain_tsearch(params[:search])
+
+    respond_to do |format|
+      format.html { render :index }
+      format.js { @meetings }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_meeting
-      @meeting = Meeting.find(params[:id])
-    end
+  def set_meeting
+    @meeting = Meeting.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def meeting_params
-      params.require(:meeting).permit(:name, :start_time)
-    end
+  def meeting_params
+    params.require(:meeting).permit(:name, :start_time)
+  end
 end
