@@ -40,6 +40,19 @@
 <% end %>
 
 <%= form_tag meetings_path, :method => 'get'  do %>
-  <%= text_field_tag :name, params[:name], autofocus: true,  type: "text", placeholder: 'search for meetings'%>
+  <%= text_field_tag :name, params[:name], autofocus: true,  type: "text", placeholder: 'searchzz'%>
   <%= submit_tag "search", type: "submit"%>
 <% end %>
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCLEiHufXtBd5u2sr_ojjxhew47EzA-hyY",
+        authDomain: "calendar-8fd51.firebaseapp.com",
+        databaseURL: "https://calendar-8fd51.firebaseio.com",
+        projectId: "calendar-8fd51",
+        storageBucket: "calendar-8fd51.appspot.com",
+        messagingSenderId: "472261396906"
+    };
+    firebase.initializeApp(config);
+</script>
